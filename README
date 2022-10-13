@@ -1,0 +1,20 @@
+Salad Bot Readme
+================
+
+This bot is mostly intended for personal use, but feel free to take a gander.
+
+
+Use/ enviroment setup
+---------------------
+
+(Add bot token to 'token.txt')
+
+Simple:
+    $ pip install -r requirements.txt
+    $ python3 bot.py  # or chmod +x bot.py && ./bot.py
+
+Dev/ venv:
+    $ python3 -m venv venv
+    $ source venv/bin/activate
+    $ pip install -r requirements.txt
+    $ python bot.py  # or chmod +x bot.py && ./bot.py

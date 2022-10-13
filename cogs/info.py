@@ -9,11 +9,16 @@ class Info(Cog, description="Display bot information/ info for Minecraft server.
         self.bot = bot
         self.ip_json = "https://ipinfo.io/json"
         self.port = 25569
+        self.github = "https://github.com/sa-lad/saladbot"
 
     @property
     def ip_from_json(self):
         with request.urlopen(self.ip_json) as json:
             return loads(json.read().decode())["ip"]
+
+    @command(description="Github repository for the bot.")
+    async def github(self, ctx):
+        await ctx.send(f"__Github__\nCheck out the project:\n{self.github}")
 
     @command(description="Bot \"about me\"/ description.")
     async def about(self, ctx):
