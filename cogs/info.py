@@ -5,14 +5,14 @@ from discord.ext.commands import Bot, Cog, command
 
 
 class Info(Cog, description="Display bot information/ info for Minecraft server."):
-    def __init__(self, bot: Bot):
+    def __init__(self, bot: Bot) -> None:
         self.bot = bot
         self.ip_json = "https://ipinfo.io/json"
         self.port = 25569
         self.github = "https://github.com/sa-lad/saladbot"
 
     @property
-    def ip_from_json(self):
+    def ip_from_json(self) -> str:
         with request.urlopen(self.ip_json) as json:
             return loads(json.read().decode())["ip"]
 
