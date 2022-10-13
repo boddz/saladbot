@@ -24,8 +24,8 @@ class BundleBot(Bot):
         ----
         *cogs: The cog class to add to bot
         """
-        for i in range(len(cogs)):
-            await self.add_cog(cogs[i](bot))
+        for i in enumerate(cogs):
+            await self.add_cog(cogs[i[0]](bot))
 
     async def on_ready(self) -> None:
         """ This funtion is called by `Bot` upon ready. """
