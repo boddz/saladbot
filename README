@@ -3,8 +3,11 @@ Salad Bot Readme
 
 This bot is mostly intended for personal use, but feel free to take a gander.
 
+This project uses the discord.py module:
+https://discordpy.readthedocs.io/en/stable/index.html
 
-Use/ enviroment setup
+
+Use/ Enviroment Setup
 ---------------------
 
 (Add bot token to 'token.txt')
