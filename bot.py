@@ -3,7 +3,7 @@
 from discord import Intents, Status, ActivityType, Activity
 from discord.ext.commands import Bot, Cog
 
-from cogs import Info
+from cogs import Info, Admin
 
 
 class BundleBot(Bot):
@@ -30,7 +30,7 @@ class BundleBot(Bot):
     async def on_ready(self) -> None:
         """ This funtion is called by `Bot` upon ready. """
         await self.change_presence(status=Status.online, activity=Activity(type=ActivityType.watching, name=f"{len(self.guilds)} guilds..."))
-        await self.parse_cogs(Info)
+        await self.parse_cogs(Info, Admin)
         print(f"{self.user}: {self.status}")
 
 
